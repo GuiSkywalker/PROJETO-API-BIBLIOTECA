@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Consulta API Livros</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div>
             <h1>Consulta API Livros</h1>
             <input type="text" id="inputnome" placeholder="Nome do livro">
-            <input type="number" id="inputnumber" placeholder="Número de retonos">
+            <input type="number" id="inputnumber" placeholder="Número de retornos">
             <button onClick="trataConsultarBtn()">Consultar</button>
             <button onClick="trataLimparBtn()">Limpar</button>
             <div style="margin-top:15px"id="loadingDiv"></div>
@@ -19,7 +20,7 @@
         <script>
             function trataConsultarBtn() {
                 // Apresenta GIF de "loading"
-                document.getElementById('loadingDiv').innerHTML = '<img id="loadingImg" style="width:30px" src="https://i.gifer.com/ZKZg.gif">';
+                document.getElementById('loadingDiv').innerHTML = '<img id="loadingImg" style="width:30px" src="https://i.gifer.com/XVo6.gif">';
 
                 limpaResultados();
                 
@@ -59,16 +60,19 @@
                     inputnumber = resultados.length;
                 }
 
+                
+
                 for (var i = 0; i < inputnumber; i++) { 
                     conteudo += `Título: ${resultados[i].title}<br>`;
                     conteudo += `Autor: ${resultados[i].author_name}<br>`;
                     conteudo += `Ano de publicação: ${resultados[i].first_publish_year}<br>`;
+                    conteudo += `Idiomas disponíveis: ${resultados[i].language}<br>`;
                     if (resultados[i].isbn && resultados[i].isbn.length > 0) {
-                        conteudo += `ISBN: ${resultados[i].isbn[0]}<br><br>`;
+                        conteudo += `ISBN: ${resultados[i].isbn[0]}<br><hr><br>`;
                 }
                 
             }
-        
+            
                 
                 const elem = document.getElementById('wordResponse');
                 elem.innerHTML = conteudo;
@@ -81,6 +85,7 @@
 
             function limpaInputs() {
                 document.getElementById("inputnome").value = '';
+                document.getElementById("inputnumber").value = '';
             }
 
             function limpaResultados() {
