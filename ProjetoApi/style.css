@@ -3,10 +3,13 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    background-image: url('https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -50,3 +53,4 @@ button:hover {
     margin-top: 15px;
     color: #666;
 }
+
