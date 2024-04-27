@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    background-image: url('https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-image: url('https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -38,11 +38,13 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-right: 5px;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #4cae4c;
+    box-shadow: 0 0 15px #4CAF50;
 }
+
 
 #loadingDiv {
     text-align: center;
