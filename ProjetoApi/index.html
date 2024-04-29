@@ -68,11 +68,8 @@
                     conteudo += `Autor: ${resultados[i].author_name}<br>`;
                     conteudo += `Ano de publicação: ${resultados[i].first_publish_year}<br>`;
                     conteudo += `Idiomas disponíveis: ${resultados[i].language}<br>`;
-                    if (resultados[i].isbn && resultados[i].isbn.length > 0) {
-                        conteudo += `ISBN: ${resultados[i].isbn[0]}<br><hr><br>`;
+                    conteudo += `ISBN: ${resultados[i].isbn[0]}<br><hr><br>`;
                 }
-                
-            }
             
                 
                 const elem = document.getElementById('wordResponse');
