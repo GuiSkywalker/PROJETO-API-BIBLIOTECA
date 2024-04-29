@@ -30,7 +30,7 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-button {
+ #consultar{
     background-color: #5cb85c;
     color: white;
     padding: 10px 15px;
@@ -41,8 +41,23 @@ button {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-button:hover {
+ #limpar{
+    background-color: #c45555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#consultar:hover {
     box-shadow: 0 0 15px #4CAF50;
+}
+
+#limpar:hover {
+    box-shadow: 0 0 15px #b85c5c;
 }
 
 
@@ -55,4 +70,5 @@ button:hover {
     margin-top: 15px;
     color: #666;
 }
+
 
