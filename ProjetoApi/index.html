@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta charset="UTF-8"/>
         <title>Consulta API Livros</title>
         <link rel="icon" href="https://cdn.pixabay.com/photo/2017/05/24/23/25/book-2341848_1280.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div>
             <h1>Consulta API Livros</h1>
-            <input type="text" id="inputnome" placeholder="Nome do livro">
+            <input type="text" id="inputnome" placeholder="Nome do livro" >
             <input type="number" id="inputnumber" placeholder="Número de retornos" min="1">
-            <button onClick="trataConsultarBtn()">Consultar</button>
-            <button onClick="trataLimparBtn()">Limpar</button>
+            <button id="consultar" onClick="trataConsultarBtn()"><i class="bi bi-search"></i> Consultar</button>
+            <button id="limpar" onClick="trataLimparBtn()"><i class="bi bi-trash"></i> Limpar</button>
             <div style="margin-top:15px"id="loadingDiv"></div>
             <p id="wordResponse"></p>
         </div>
@@ -39,6 +41,7 @@
                     apresentaResultado(data);
                     console.log(data);
                 })
+
 
             }
 
@@ -70,6 +73,8 @@
                     conteudo += `Idiomas disponíveis: ${resultados[i].language}<br>`;
                     conteudo += `ISBN: ${resultados[i].isbn[0]}<br><hr><br>`;
                 }
+                
+            
             
                 
                 const elem = document.getElementById('wordResponse');
