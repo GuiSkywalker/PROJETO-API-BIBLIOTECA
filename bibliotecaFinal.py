@@ -28,7 +28,7 @@ def pesquisar_livro(event):
         resultados.insert('', 'end', values=("Erro ao acessar a API", "", "", ""))
 
 def close(event):
-    exit()
+    root.destroy()
 
 root = customtkinter.CTk()
 root.title("Biblioteca")
