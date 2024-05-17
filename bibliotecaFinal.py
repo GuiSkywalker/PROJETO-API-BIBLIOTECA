@@ -30,6 +30,9 @@ def pesquisar_livro(event):
 def close(event):
     root.destroy()
 
+def fechar():
+    exit()
+
 root = customtkinter.CTk()
 root.title("Biblioteca")
 root.geometry("1110x720")
@@ -52,7 +55,7 @@ resultados.heading('#2', text='Autores', anchor='center')
 resultados.heading('#3', text='Ano de Publicação', anchor='center')
 resultados.heading('#4', text='ISBN', anchor='center')
 resultados.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
-close_button = tk.CTkButton(root, text="Fechar", command=close)
+close_button = tk.CTkButton(root, text="Fechar", command=fechar)
 close_button.grid(padx=400,pady=10)
 
 resultados.column("#0", width=0, stretch=tk.NO)
