@@ -31,7 +31,7 @@ def close(event):
     root.destroy()
 
 def fechar():
-    exit()
+    root.destroy()
 
 root = customtkinter.CTk()
 root.title("Biblioteca")
